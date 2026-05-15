@@ -1,0 +1,40 @@
+# ===========================================================================
+# .gitignore — DeliverPro (Android + API Node.js)
+# ===========================================================================
+
+# --- Android / Gradle ---
+android/*.iml
+android/.gradle/
+android/.idea/caches
+android/.idea/libraries
+android/.idea/modules.xml
+android/.idea/workspace.xml
+android/.idea/navEditor.xml
+android/.idea/assetWizardSettings.xml
+android/local.properties
+android/build/
+android/app/build/
+android/captures/
+android/.externalNativeBuild/
+android/.cxx/
+*.apk
+*.aab
+*.jks
+*.keystore
+
+# --- API Node.js ---
+api/node_modules/
+api/.env
+api/*.log
+api/npm-debug.log*
+
+# --- Secrets génériques (sécurité) ---
+.env
+.env.*
+!.env.example
+
+# --- Divers OS / éditeurs ---
+.DS_Store
+Thumbs.db
+.vscode/
+*.swp
