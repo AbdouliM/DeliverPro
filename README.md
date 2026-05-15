@@ -16,13 +16,13 @@ L'objectif est de centraliser la communication entre contrôleurs et livreurs et
 
 ```
 ┌─────────────────────┐      ┌──────────────────────┐      ┌─────────────────────┐
-│   Android App       │      │    API Node.js        │      │   Oracle DB 11g      │
-│   (Java, Retrofit2)  │ ───► │   (Express.js, JWT)    │ ───► │   + SQLite local      │
-│   /android           │      │   /api                 │      │   (mode offline)      │
+│   Android App       │      │    API Node.js       │      │   Oracle DB 11g     │
+│   (Java, Retrofit2) │ ───► │   (Express.js, JWT)  │ ───► │   + SQLite local    │
+│   /android          │      │   /api               │      │   (mode offline)    │
 └─────────────────────┘      └──────────────────────┘      └─────────────────────┘
 ```
 
-- **[`/android`](./android)** — Application Android native (Java), ViewBinding, Retrofit2, synchronisation SQLite offline. [Voir le README](./android/README.md)
+- **[`/android`](./android)** — Application Android native (Java), ViewBinding, Retrofit2, synchronisation SQLite offline.
 - **[`/api`](./api)** — API REST Node.js / Express, authentification JWT, connexion Oracle 11g. [Voir le README](./api/README.md)
 
 ## Fonctionnalités principales
