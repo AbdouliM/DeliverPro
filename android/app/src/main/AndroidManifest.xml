@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Permission Internet obligatoire pour appeler l'API -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.DeliverPro"
+        android:usesCleartextTraffic="true">
+        <!--
+            usesCleartextTraffic="true" permet les appels HTTP (pas HTTPS)
+            vers localhost pendant le développement.
+            A retirer en production (utiliser HTTPS uniquement).
+        -->
+
+        <!-- Écran de démarrage : Login -->
+        <activity
+            android:name=".ui.auth.LoginActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Mot de passe oublié -->
+        <activity android:name=".ui.auth.ForgotPasswordActivity" />
+
+        <!-- Dashboard Contrôleur -->
+        <activity android:name=".ui.controller.ControllerMainActivity" />
+
+        <!-- Dashboard Livreur -->
+        <activity android:name=".ui.deliverer.DelivererMainActivity" />
+
+        <activity android:name=".ui.controller.DeliveriesActivity" />
+        <activity android:name=".ui.controller.SearchFilterActivity" />
+        <activity android:name=".ui.controller.DeliveryDetailActivity" />
+
+        <activity android:name=".ui.deliverer.DriverStopDetailActivity" />
+        <activity android:name=".ui.deliverer.UpdateStatusActivity" />
+        <activity android:name=".ui.deliverer.EmergencyActivity" />
+
+        <activity android:name=".ui.controller.MessagingActivity" />
+        <activity android:name=".ui.controller.ChatActivity" />
+        <activity android:name=".ui.controller.ProfileActivity" />
+
+    </application>
+
+</manifest>

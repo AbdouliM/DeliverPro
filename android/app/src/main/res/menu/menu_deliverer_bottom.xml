@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- res/menu/menu_deliverer_bottom.xml -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_my_deliveries"
+        android:icon="@drawable/ic_package"
+        android:title="Mes commandes" />
+
+    <item
+        android:id="@+id/nav_messaging"
+        android:icon="@drawable/ic_message"
+        android:title="Messagerie" />
+
+    <item
+        android:id="@+id/nav_emergency"
+        android:icon="@drawable/ic_emergency"
+        android:title="Urgence" />
+
+    <item
+        android:id="@+id/nav_profile"
+        android:icon="@drawable/ic_person"
+        android:title="Profil" />
+
+</menu>

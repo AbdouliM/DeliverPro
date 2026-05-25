@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- res/layout/activity_emergency.xml — Écran 11 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F5F5F5">
+
+    <!-- Toolbar rouge urgence -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#E53935"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🚨"
+            android:textSize="22sp"
+            android:layout_marginEnd="10dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Alerte urgence"
+                android:textColor="#FFFFFF"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Envoyer alerte urgente au contrôleur"
+                android:textColor="#FFCDD2"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Type d'alerte -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Type d'alerte"
+                android:textSize="14sp"
+                android:textColor="#444444"
+                android:layout_marginBottom="10dp" />
+
+            <!-- Chips type alerte -->
+            <!--
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:flexWrap="wrap"
+                android:layout_marginBottom="8dp">
+                -->
+
+                <com.google.android.flexbox.FlexboxLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:flexWrap="wrap"
+                    app:flexDirection="row"
+                    android:layout_marginBottom="8dp">
+
+                <TextView android:id="@+id/chipAccident"
+                    android:layout_width="wrap_content" android:layout_height="36dp"
+                    android:text="Accident" android:textSize="13sp" android:gravity="center"
+                    android:paddingStart="14dp" android:paddingEnd="14dp" android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp" android:clickable="true" android:focusable="true"
+                    android:background="@drawable/bg_chip_selected" android:textColor="#1A56A4" />
+
+                <TextView android:id="@+id/chipClientIssue"
+                    android:layout_width="wrap_content" android:layout_height="36dp"
+                    android:text="Client issue" android:textSize="13sp" android:gravity="center"
+                    android:paddingStart="14dp" android:paddingEnd="14dp" android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp" android:clickable="true" android:focusable="true"
+                    android:background="@drawable/bg_chip" android:textColor="#888888" />
+
+                <TextView android:id="@+id/chipVehicle"
+                    android:layout_width="wrap_content" android:layout_height="36dp"
+                    android:text="Vehicle breakdown" android:textSize="13sp" android:gravity="center"
+                    android:paddingStart="14dp" android:paddingEnd="14dp" android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp" android:clickable="true" android:focusable="true"
+                    android:background="@drawable/bg_chip" android:textColor="#888888" />
+          <!--  </LinearLayout> -->
+        </com.google.android.flexbox.FlexboxLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="20dp">
+
+                <TextView android:id="@+id/chipAddress"
+                    android:layout_width="wrap_content" android:layout_height="36dp"
+                    android:text="Address not found" android:textSize="13sp" android:gravity="center"
+                    android:paddingStart="14dp" android:paddingEnd="14dp" android:layout_marginEnd="8dp"
+                    android:clickable="true" android:focusable="true"
+                    android:background="@drawable/bg_chip" android:textColor="#888888" />
+
+                <TextView android:id="@+id/chipSafety"
+                    android:layout_width="wrap_content" android:layout_height="36dp"
+                    android:text="Safety concern" android:textSize="13sp" android:gravity="center"
+                    android:paddingStart="14dp" android:paddingEnd="14dp"
+                    android:clickable="true" android:focusable="true"
+                    android:background="@drawable/bg_chip" android:textColor="#888888" />
+            </LinearLayout>
+
+            <!-- N° commande auto-rempli -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="N° commande (auto-rempli)"
+                android:textSize="13sp"
+                android:textColor="#444444"
+                android:layout_marginBottom="6dp" />
+
+            <EditText
+                android:id="@+id/etOrderNumber"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:background="@drawable/bg_input"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp"
+                android:textSize="14sp"
+                android:textColor="#1A56A4"
+                android:enabled="false"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Position auto-détectée -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Votre position"
+                android:textSize="13sp"
+                android:textColor="#444444"
+                android:layout_marginBottom="6dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:background="@drawable/bg_input"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingStart="14dp"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="📍 "
+                    android:textSize="16sp"
+                    android:layout_marginEnd="8dp" />
+
+                <TextView
+                    android:id="@+id/tvLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Détection en cours..."
+                    android:textSize="14sp"
+                    android:textColor="#888888" />
+            </LinearLayout>
+
+            <!-- Description du problème -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Décrire le problème"
+                android:textSize="13sp"
+                android:textColor="#444444"
+                android:layout_marginBottom="6dp" />
+
+            <EditText
+                android:id="@+id/etDescription"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:hint="Expliquer ce qui s'est passé en détail..."
+                android:textColorHint="#BBBBBB"
+                android:background="@drawable/bg_input"
+                android:padding="14dp"
+                android:textSize="14sp"
+                android:gravity="top"
+                android:inputType="textMultiLine"
+                android:layout_marginBottom="24dp" />
+
+            <!-- Bouton Send Emergency Alert -->
+            <Button
+                android:id="@+id/btnSendAlert"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="🚨  Send Emergency Alert"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:backgroundTint="#E53935" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom nav livreur -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        app:menu="@menu/menu_deliverer_bottom"
+        app:itemIconTint="@drawable/bottom_nav_selector"
+        app:itemTextColor="@drawable/bottom_nav_selector"
+        app:labelVisibilityMode="labeled" />
+
+</LinearLayout>

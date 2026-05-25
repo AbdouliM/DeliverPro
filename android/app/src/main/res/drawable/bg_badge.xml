@@ -1,0 +1,4 @@
+<!-- res/drawable/bg_badge.xml — badge rouge non lus -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="oval">
+    <solid android:color="#E53935" />
+</shape>

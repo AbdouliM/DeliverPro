@@ -1,0 +1,6 @@
+
+<!-- res/drawable/bg_send_button.xml — bouton envoyer -->
+
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="oval">
+    <solid android:color="#1A56A4" />
+</shape>

@@ -1,0 +1,6 @@
+<!-- res/drawable/bg_bubble_mine.xml — bulle bleue message envoyé -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+    <solid android:color="#1A56A4" />
+    <corners android:topLeftRadius="16dp" android:topRightRadius="4dp"
+             android:bottomLeftRadius="16dp" android:bottomRightRadius="16dp" />
+</shape>

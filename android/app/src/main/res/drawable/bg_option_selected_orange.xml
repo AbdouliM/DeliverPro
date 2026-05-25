@@ -1,0 +1,8 @@
+<!-- res/drawable/bg_option_selected_orange.xml -->
+
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="#FFF8F0" />
+    <stroke android:width="2dp" android:color="#E07800" />
+    <corners android:radius="8dp" />
+</shape>
